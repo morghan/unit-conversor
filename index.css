@@ -1,0 +1,9 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#number {
+	font-size: 100px;
+}
