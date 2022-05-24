@@ -7,22 +7,18 @@ body {
 	color: white;
 	letter-spacing: -0.05em;
 }
-
-#container {
+/* 
+Use a class to style various elements the same way 
+and id to make tweaks
+*/
+.container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-
-#main,
-#results {
 	width: 100%;
 }
 
 #main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	background: linear-gradient(250deg, #585dfe 0%, #fb3796 100%);
 }
 
@@ -35,15 +31,15 @@ body {
 #results {
 	background: #1f2937;
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
 	gap: 30px;
+	/* Use padding since margin creates white space between divs */
 	padding-top: 40px;
 }
 
-#results-title {
+.results-title {
 	font-weight: 600;
 }
+
 #results p {
 	display: flex;
 	justify-content: center;
@@ -55,29 +51,35 @@ body {
 	max-width: 550px;
 	margin: 40px 0 50px;
 	color: white;
+	/* Use transparent background to see the gradient behind the input */
 	background-color: transparent;
 	border-radius: 10px;
+	/* Set up border style before focus event. Add transition timer */
 	border: 3px solid #1f2937;
 	transition: 0.5s;
 	outline: none;
 }
 
+/* Style border on focus event */
 #number:focus {
 	border: 3px solid white;
 }
 
+/* Removes increment and decrement arrows/spinners from input type number */
 #number::-webkit-outer-spin-button,
 #number::-webkit-inner-spin-button {
 	appearance: none;
 	margin: 0;
 }
 
+/* Rinse and repeat placeholder animation */
 #number::placeholder {
 	color: #1f2937;
 	opacity: 0.5;
 	transition: 0.5s;
 }
 
+/* Event goes before attribute */
 #number:focus::placeholder {
 	color: transparent;
 }
