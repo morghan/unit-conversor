@@ -2,8 +2,82 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	color: white;
+	letter-spacing: -0.05em;
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#main,
+#results {
+	width: 100%;
+}
+
+#main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: linear-gradient(250deg, #585dfe 0%, #fb3796 100%);
+}
+
+#main h1 {
+	font-weight: 700;
+	font-size: 30px;
+	margin-top: 60px;
+}
+
+#results {
+	background: #1f2937;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding-top: 40px;
+}
+
+#results-title {
+	font-weight: 600;
+}
+#results p {
+	display: flex;
+	justify-content: center;
 }
 
 #number {
+	text-align: center;
 	font-size: 100px;
+	max-width: 550px;
+	margin: 40px 0 50px;
+	color: white;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 3px solid #1f2937;
+	transition: 0.5s;
+	outline: none;
+}
+
+#number:focus {
+	border: 3px solid white;
+}
+
+#number::-webkit-outer-spin-button,
+#number::-webkit-inner-spin-button {
+	appearance: none;
+	margin: 0;
+}
+
+#number::placeholder {
+	color: #1f2937;
+	opacity: 0.5;
+	transition: 0.5s;
+}
+
+#number:focus::placeholder {
+	color: transparent;
 }

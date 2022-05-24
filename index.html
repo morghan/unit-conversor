@@ -1,36 +1,44 @@
 <html>
 	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
 		<script src="index.js"></script>
-		<div id="main">
-			<h1>Metric/Imperial unit conversion</h1>
-			<input
-				type="number"
-				placeholder="Number"
-				id="number"
-				oninput="convert()"
-			/>
-		</div>
-		<div id="results">
-			<div id="length">
-				<p>Length (Meters/Feet)</p>
-				<p id="length-conversion">
-					0 meters = 0.000 feet | 0 feet = 0.000 meters
-				</p>
+		<div id="container">
+			<div id="main">
+				<h1>Metric/Imperial unit conversion</h1>
+				<input
+					type="number"
+					placeholder="Number"
+					id="number"
+					oninput="convert()"
+				/>
 			</div>
-			<div id="volume">
-				<p>Volume (Liters/Gallons)</p>
-				<p id="volume-conversion">
-					0 liters = 0.000 gallons | 0 gallons = 0.000 liters
-				</p>
-			</div>
-			<div id="mass">
-				<p>Mass (Kilograms/Pounds)</p>
-				<p id="mass-conversion">
-					0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos
-				</p>
+			<div id="results">
+				<div id="length">
+					<p id="results-title">Length (Meters/Feet)</p>
+					<p id="length-conversion">
+						0 meters = 0.000 feet | 0 feet = 0.000 meters
+					</p>
+				</div>
+				<div id="volume">
+					<p id="results-title">Volume (Liters/Gallons)</p>
+					<p id="volume-conversion">
+						0 liters = 0.000 gallons | 0 gallons = 0.000 liters
+					</p>
+				</div>
+				<div id="mass">
+					<p id="results-title">Mass (Kilograms/Pounds)</p>
+					<p id="mass-conversion">
+						0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos
+					</p>
+				</div>
 			</div>
 		</div>
 	</body>

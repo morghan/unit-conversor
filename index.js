@@ -1,6 +1,5 @@
 function convert() {
 	let number = document.getElementById('number').value;
-	//console.log("input changed: "+ number)
 	let lengthParagraph = document.getElementById('length-conversion');
 	let metersToFeet = (number * 3.28084).toFixed(3);
 	let feetToMeters = (number * 0.3048).toFixed(3);
